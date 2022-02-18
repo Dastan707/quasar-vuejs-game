@@ -125,8 +125,6 @@ const store = new Vuex.Store({
               if (el.id !== el.category_id) {
                 const isAnswered = [...answeredFalseIds, ...answeredTrueIds].indexOf(el.id) >= 0
                 const answerRight = !isAnswered ? null : answeredTrueIds.indexOf(isAnswered) >= 0
-                // console.log(answeredTrueIds)
-                // console.log(answeredFalseIds)
                 state.clues.push({
                   isAnswered,
                   answerRight,
